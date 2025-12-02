@@ -1,0 +1,7 @@
+map,connectivity,heuristic,size,found,path_length,time_sec,expanded,generated,bf_min,bf_max,bf_avg,max_frontier,max_explored
+demo.map,4,manhattan,25x11,True,35,0.00049,35,99,2,3,2.912,32,35
+dia10x10.map,4,manhattan,10x10,True,19,0.00018,19,50,2,3,2.778,16,19
+adaptive-depth-1.map,4,manhattan,100x100,True,198,0.06744,5237,19626,1,4,3.748,319,5237
+Aurora.map,8,euclidean,1024x768,True,166,0.00959,565,3296,2,8,5.844,20,565
+Brushfire.map,8,euclidean,512x512,True,750,0.58875,48125,372984,1,8,7.75,1192,48125
+room-1100-110.map,8,euclidean,1100x1100,True,220,0.16213,13572,107602,3,8,7.929,1152,13572
