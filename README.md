@@ -25,7 +25,7 @@ project/
 └── README.md                # This file
 
 
-1. How to Run the Project
+1. *How to Run the Project*
 
 Option A — Run in Google Colab 
 
