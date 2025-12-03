@@ -15,15 +15,6 @@ GridWorld → PDDL → Fast Downward → Plan → Metrics
 
 This provides a clean, scientific comparison between search algorithms and planners on the same domain.
 
-project/
-│
-├── grid_pathfinding.py      # Full implementation (A*, PDDL, experiments)
-├── domain.pddl              # PDDL domain (generated automatically)
-├── pddl_results.csv         # Results for PDDL runs
-├── A*_results.csv           # Results for A* runs
-├── comparison_results.csv   # Joined table A* vs PDDL
-└── README.md                # This file
-
 
 1. *How to Run the Project*
 
