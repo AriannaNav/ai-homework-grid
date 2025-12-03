@@ -13,9 +13,8 @@ The experimental pipeline is:
 GridWorld → A* → Metrics
 GridWorld → PDDL → Fast Downward → Plan → Metrics
 
-⸻
 
-How to Run the Project
+HOW TO RUN THE PROJECT 
 
 OPTION A — Google Colab (recommended)
 
@@ -30,7 +29,6 @@ The notebook is fully compatible with Google Colab and automatically:
 To use it:
 Upload grid_pathfinding.py or the notebook → Run all cells.
 
-⸻
 
 OPTION B — Run Locally (Python ≥ 3.8)
 
@@ -52,7 +50,6 @@ Windows / macOS
 Install equivalent compilers (Visual Studio Build Tools, Xcode Command Line Tools)
 and ensure Python headers are available.
 
-⸻
 
 Fast Downward (required for PDDL planning)
 
@@ -65,7 +62,6 @@ cd fastdownward
 Verify installation:
 ./fast-downward.py –help
 
-⸻
 
 Benchmark Map Dataset
 
@@ -87,7 +83,7 @@ benchmarks/maps/gppc-2013/
 benchmarks/maps/gppc-2014/
 benchmarks/maps/movingai/
 
-⸻
+
 
 Running A* Experiments
 
@@ -99,7 +95,6 @@ A* is implemented with:
 	•	Euclidean heuristic for 8-connected grids
 	•	full metric collection
 
-⸻
 
 Running PDDL Planning (Fast Downward)
 
@@ -109,7 +104,7 @@ The PDDL pipeline consists of:
 	3.	Parsing of the sas_plan output
 	4.	Conversion of symbolic actions into grid coordinates
 
-⸻
+
 
 Collected metrics:
 	•	path length
@@ -120,7 +115,7 @@ Collected metrics:
 	•	max frontier size
 	•	max explored size
 
-⸻
+
 
 Visualization
 
@@ -131,7 +126,6 @@ The script produces visual overlays showing:
 	•	PDDL path
 	•	start and goal cells
 
-⸻
 
 A* vs PDDL Comparison
 
@@ -141,7 +135,7 @@ The final comparison includes:
 	•	runtime ratio (PDDL / A*)
 	•	exported CSV files for all metrics
 
-⸻
+
 
 License
 
