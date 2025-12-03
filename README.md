@@ -50,16 +50,16 @@ GridWorld → PDDL → Fast Downward → Plan → Metrics
 	and ensure Python headers are available.
 
 
-2.. Fast Downward (required for PDDL planning)
+2. Fast Downward (required for PDDL planning)
 
-	Download and build the planner:
-	
-	git clone https://github.com/aibasel/downward.git fastdownward
-	cd fastdownward
-	./build.py
-	
-	Verify installation:
-	./fast-downward.py –help
+		Download and build the planner:
+		
+		git clone https://github.com/aibasel/downward.git fastdownward
+		cd fastdownward
+		./build.py
+		
+		Verify installation:
+		./fast-downward.py –help
 
 
 3. Benchmark Map Dataset
