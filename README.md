@@ -1,5 +1,4 @@
 # ai-homework-grid
-Homework AI – Grid Pathfinding with A* and PDDL
 This project compares A* search and PDDL classical planning on identical grid-based pathfinding tasks.
 Using the same GridWorld maps (MovingAI / GPPC format), we evaluate how a search-based approach and a planning-based approach differ in:
 	•	runtime
