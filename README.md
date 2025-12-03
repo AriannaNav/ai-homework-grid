@@ -27,112 +27,112 @@ project/
 
 1. *How to Run the Project*
 
-Option A — Run in Google Colab 
+	Option A — Run in Google Colab 
+	
+	The notebook is fully compatible with Colab and automatically:
+		•	installs Fast Downward,
+		•	downloads the benchmark map dataset,
+		•	runs A*,
+		•	runs PDDL planning,
+		•	visualizes paths,
+		•	outputs CSV files and plots.
+	
+	Simply upload grid_pathfinding.py or your notebook, then run all cells.
+	
+	Option B - Run it locally (but less optimized) 
 
-The notebook is fully compatible with Colab and automatically:
-	•	installs Fast Downward,
-	•	downloads the benchmark map dataset,
-	•	runs A*,
-	•	runs PDDL planning,
-	•	visualizes paths,
-	•	outputs CSV files and plots.
-
-Simply upload grid_pathfinding.py or your notebook, then run all cells.
-
-Option B - Run it locally (but less optimized) 
-
-2. Installing Dependencies (Local Python >= 3.8)
-
-To run this project locally, you need:
-
-Python packages
-pip install numpy matplotlib pandas
-
-System requirements
-
-You must install:
-	•	cmake
-	•	g++
-	•	python3-dev
-
-sudo apt-get install cmake g++ python3-dev
-
-Fast Downward (Required for PDDL planning)
-
-Download and build the planner:
-
-git clone https://github.com/aibasel/downward.git fastdownward
-cd fastdownward
-./build.py
-
-Ensure fast-downward.py is executable:
-./fast-downward.py --help
-
-
-3. Downloading the Benchmark Map Dataset
-
-The official MovingAI + GPPC datasets are too large to store in the repo.
-The code automatically downloads and extracts them.
-
-Manual installation:
-wget https://bitbucket.org/shortestpathlab/benchmarks/get/master.zip
-unzip master.zip
-mv shortestpathlab-benchmarks-*/grid-maps benchmarks/maps/
-
-Directory structure required:
-benchmarks/maps/local/
-benchmarks/maps/gppc-2013/
-benchmarks/maps/gppc-2014/
-benchmarks/maps/movingai/
+2. *Installing Dependencies (Local Python >= 3.8)*
+	
+	To run this project locally, you need:
+	
+	Python packages
+	pip install numpy matplotlib pandas
+	
+	System requirements
+	
+	You must install:
+		•	cmake
+		•	g++
+		•	python3-dev
+	
+	sudo apt-get install cmake g++ python3-dev
+	
+	Fast Downward (Required for PDDL planning)
+	
+	Download and build the planner:
+	
+	git clone https://github.com/aibasel/downward.git fastdownward
+	cd fastdownward
+	./build.py
+	
+	Ensure fast-downward.py is executable:
+	./fast-downward.py --help
 
 
-4. Running A* Experiments
+3. *Downloading the Benchmark Map Dataset*
 
-A* is implemented with:
-	•	duplicate elimination
-	•	no re-opening
-	•	g(n)+h(n) evaluation
-	•	two heuristics: Manhattan (4-connected) and Euclidean (8-connected)
-	•	full metrics collection
+	The official MovingAI + GPPC datasets are too large to store in the repo.
+	The code automatically downloads and extracts them.
+	
+	Manual installation:
+	wget https://bitbucket.org/shortestpathlab/benchmarks/get/master.zip
+	unzip master.zip
+	mv shortestpathlab-benchmarks-*/grid-maps benchmarks/maps/
+	
+	Directory structure required:
+	benchmarks/maps/local/
+	benchmarks/maps/gppc-2013/
+	benchmarks/maps/gppc-2014/
+	benchmarks/maps/movingai/
 
-Example 
-df_easy = run_astar_experiment(easy_maps, connectivity=4, heuristic=manhattan)
-df_hard = run_astar_experiment(hard_maps, connectivity=8, heuristic=euclidean)
 
-Metrics collected:
-	•	path length
-	•	runtime
-	•	expanded nodes
-	•	generated nodes
-	•	branching factor (min, max, average)
-	•	max frontier size
-	•	max explored size
+4. *Running A* Experiments*
 
-5. Running PDDL Planning
+	A* is implemented with:
+		•	duplicate elimination
+		•	no re-opening
+		•	g(n)+h(n) evaluation
+		•	two heuristics: Manhattan (4-connected) and Euclidean (8-connected)
+		•	full metrics collection
+	
+	Example 
+	df_easy = run_astar_experiment(easy_maps, connectivity=4, heuristic=manhattan)
+	df_hard = run_astar_experiment(hard_maps, connectivity=8, heuristic=euclidean)
+	
+	Metrics collected:
+		•	path length
+		•	runtime
+		•	expanded nodes
+		•	generated nodes
+		•	branching factor (min, max, average)
+		•	max frontier size
+		•	max explored size
 
-The pipeline:
-	1.	Generate problem_auto.pddl from GridWorld
-	2.	Call Fast Downward
-	3.	Parse sas_plan
-	4.	Convert actions → grid path
+5. *Running PDDL Planning*
+	
+	The pipeline:
+		1.	Generate problem_auto.pddl from GridWorld
+		2.	Call Fast Downward
+		3.	Parse sas_plan
+		4.	Convert actions → grid path
 
-6. Visualization
-   Plots include:
-	•	grid map
-	•	obstacles
-	•	complete path
-	•	start and goal markers
+6. *Visualization*
+	   Plots include:
+		•	grid map
+		•	obstacles
+		•	complete path
+		•	start and goal markers
 
-7. A* vs PDDL Comparison
-   Comparison includes:
-	•	runtime (log scale plots)
-	•	path length comparison
-	•	runtime ratio (PDDL/A*)
+7. * A* vs PDDL Comparison*
+	   Comparison includes:
+		•	runtime (log scale plots)
+		•	path length comparison
+		•	runtime ratio (PDDL/A*)
 
-8. License
+8. *License*
 
-This project is for academic use as part of the AI Planning & Search homework assignment.
+	This project is for academic use as part of the AI Planning & Search homework assignment.
 
-9. Author
+9. *Author*
 
-Arianna Navarra — 2025
+	Arianna Navarra — 2025
